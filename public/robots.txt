@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Allow: /
+
+Sitemap: https://seo-project-dw0s.onrender.com/sitemap.xml
+Host: seo-project-dw0s.onrender.com
