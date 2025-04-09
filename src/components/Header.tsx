@@ -13,7 +13,7 @@ export function Header({ cartItemsCount, onCartClick }: HeaderProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Scissors className="h-8 w-8 text-rose-500" />
-            <h1 className="text-2xl font-bold text-gray-800">Кэрэ. Товары для рукоделия</h1>
+            <h1 className="text-2xl font-bold text-gray-800">Товары для рукоделия</h1>
           </div>
           <button
             onClick={onCartClick}
