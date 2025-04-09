@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seo-project-dw0s.onrender.com/sitemap.xml
