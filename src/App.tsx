@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import { ProductCard } from './components/ProductCard';
 import { Cart } from './components/Cart';
 import { products } from './data/products';
@@ -36,13 +37,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header
         cartItemsCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
         onCartClick={() => setIsCartOpen(true)}
       />
       
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-grow">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Наши товары</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {products.map(product => (
@@ -54,6 +55,8 @@ function App() {
           ))}
         </div>
       </main>
+
+      <Footer />
 
       {isCartOpen && (
         <Cart
