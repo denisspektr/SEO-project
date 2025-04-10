@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ProductCard } from './components/ProductCard';
 import { Cart } from './components/Cart';
+import { SEO } from './components/SEO';
 import { products } from './data/products';
 import { Product, CartItem } from './types';
 
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <SEO />
       <Header
         cartItemsCount={cartItems.reduce((sum, item) => sum + item.quantity, 0)}
         onCartClick={() => setIsCartOpen(true)}
